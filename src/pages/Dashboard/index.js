@@ -7,6 +7,7 @@ import { db } from "../../services/firebaseConnection";
 
 import Header from "../../components/Header";
 import Title from "../../components/Title";
+import Modal from "../../components/Modal";
 
 import * as C from './style'
 import { FiPlus, FiMessageSquare, FiSearch, FiEdit2 } from "react-icons/fi";
@@ -21,6 +22,9 @@ export default function DashBoard(){
     const [isEmpty, setIsEmpty] = useState(false);    
     const [lastDocs, setLastDocs] = useState();
     const[loadingMore, setLoadingMore] = useState(false);
+
+    const [showPostModal, setShowPostModal] = useState(false);
+    const [detail, setDetail] = useState();
 
     useEffect(() => {
         async function loadChamados(){
@@ -92,6 +96,11 @@ export default function DashBoard(){
         )
     }
 
+    function toggleModal(item){
+        setShowPostModal(!showPostModal);
+        setDetail(item)
+    }
+
     return(
         <>
             <Header />
@@ -109,11 +118,15 @@ export default function DashBoard(){
                         </Link>
                     </C.Container>
                 ) :  (
-                    <>
-                        <Link to="/new">
-                            <FiPlus color="#FFF" size={25} />
-                            Novo Chamado
-                        </Link>
+                    <> 
+                        <C.Div>
+                            <Link to="/new">
+                            
+                                    <FiPlus color="#FFF" size={25} />
+                                    Novo Chamado
+                            
+                            </Link> 
+                        </C.Div>
                             <C.Table>
                                 <thead>
                                     <tr>
@@ -137,12 +150,16 @@ export default function DashBoard(){
                                             </td>
                                             <td dataLabel="Cadastrado">{item.createdFormat}</td>
                                             <td dataLabel="#">
-                                                <Link bgColor="#3583f6">
-                                                    <FiSearch color="#FFF" size={17}/>
-                                                </Link>
-                                                <Link to={`/new/${item.id}`} bgColor="#F6A935">
-                                                    <FiEdit2 color="#FFF" size={17}/>
-                                                </Link>
+                                                <C.Div2 bgColor="#1B98E0">
+                                                    <button onClick={() => toggleModal(item)}>
+                                                        <FiSearch color="#FFF" size={17}/>
+                                                    </button>
+                                                </C.Div2>
+                                                <C.Div2 bgColor="#F6A935">
+                                                    <Link to={`/new/${item.id}`}  >
+                                                        <FiEdit2 color="#FFF" size={17}/>
+                                                    </Link>
+                                                </C.Div2>
                                             </td>
                                         </tr> 
                                         )
@@ -155,7 +172,13 @@ export default function DashBoard(){
                     </>
                 )}
             </>
-            </C.Content>           
+            </C.Content> 
+            {showPostModal && (
+                <Modal 
+                    conteudo={detail}
+                    close={() => setShowPostModal(!showPostModal) }
+                /> 
+            )}         
         </>
     )
 }

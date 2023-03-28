@@ -4,7 +4,14 @@ export const Content = styled.div `
     margin-left: 200px;
     padding: 16px;
 
-    a {
+   
+
+    @media(max-width: 700px){
+        margin-left: 0;
+    } 
+`
+export const Div = styled.div`
+ a {
         float: right;
         margin-bottom: 1.5em;
         background-color: #83bf02;
@@ -27,10 +34,6 @@ export const Content = styled.div `
             margin-right: 5px;
         }
     }
-
-    @media(max-width: 700px){
-        margin-left: 0;
-    } 
 `
 
 export const Span = styled.span`
@@ -47,18 +50,7 @@ export const Table = styled.table`
     table-layout: fixed;
     border-collapse: collapse;
 
-    a{
-        border: 0;
-        padding: 5px;
-        border-radius: 4px;
-        display: inline-block;
-        margin-right: 5px;    
-        background-color: ${props => props.bgColor};
     
-    svg{
-        vertical-align: middle;
-    } 
-    }
    
 
     caption{
@@ -156,3 +148,32 @@ export const MoreBtn = styled.button`
     font-size: 1.1em;
     color: #FFF;
 `
+
+export const Div2 = styled.div`
+    display: inline-block;
+
+    button{
+        border: 0;
+        padding: 5px;
+        border-radius: 4px;        
+        margin-right: 5px;    
+        background-color: ${props => props.bgColor};
+        
+        svg{
+        vertical-align: middle;
+    } 
+    }
+
+    a{
+        border: 0;
+        padding: 5px;
+        border-radius: 4px;        
+        margin-right: 5px;    
+        background-color: ${props => props.bgColor};
+    
+    svg{
+        vertical-align: middle;
+    } 
+    }
+`
+

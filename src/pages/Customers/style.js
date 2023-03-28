@@ -28,7 +28,7 @@ export const Label = styled.label`
     font-size: 25px;
 `
 
-export const Input = styled.select`
+export const Input = styled.input`
     margin-bottom: 20px;
     padding: 18px;
     border: 0;
