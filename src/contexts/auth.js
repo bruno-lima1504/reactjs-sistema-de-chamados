@@ -89,7 +89,8 @@ function AuthProvider({ children }){
             })        
         })
         .catch((error)=>{
-            console.log(error);            
+            console.log(error);
+            toast.error('usário não cadastrado');            
             setLoadingAuth(false);            
         }) 
     }

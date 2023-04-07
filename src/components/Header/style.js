@@ -63,3 +63,25 @@ export const Img = styled.img `
     filter: drop-shadow(2px 3px 6px #121212);
     -webkit-filter: drop-shadow(2px 3px 6px #121212);
 `
+
+
+
+export const LogoutBtn = styled.button`
+    padding: 5px 20px;
+    border: 1px solid #121212;
+    background-color: #FA998D;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    transition: all 0.2s;
+
+    :hover{
+        color: red;
+        background: #C9C9C9;
+    }
+`
+

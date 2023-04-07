@@ -9,7 +9,7 @@ import avatarImg from '../../assets/avatar.png'
 import { FiHome, FiUser, FiSettings } from 'react-icons/fi'
 
 export default function Header(){
-    const { user } = useContext(AuthContext);
+    const { user, logout } = useContext(AuthContext);
 
     return(
         <C.SideBar>
@@ -29,6 +29,10 @@ export default function Header(){
                 <FiSettings color="#FFF" size={24} />
                 Perfil
             </Link>
+           
+            <C.LogoutBtn onClick={() => logout()} >Sair</C.LogoutBtn>
+            
+
         </C.SideBar>
     )
 }

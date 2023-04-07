@@ -5,7 +5,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #121212;
+    background-color: #999;
     padding: 0 12px;
 `
 
@@ -16,11 +16,16 @@ export const Login = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-radius: 16px;
+    box-shadow: 3px 3px 10px #000;
 
     a{
         margin-bottom: 1.5rem ;
         color: #000;
         cursor: pointer;
+        :hover{
+            color: #0296DE;
+        }
     }
 `
 
@@ -29,6 +34,8 @@ export const LoginArea = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;    
 `
 
 export const Logo = styled.img`
@@ -66,5 +73,11 @@ export const LoginButton = styled.button`
     background-color: #181c2e;
     color: #FFF;
     font-size: 1.3rem;
+    box-shadow: 3px 3px #000;    
+
+    :active{
+        box-shadow: 0px 0px ;
+        transform: translate(5px, 5px)             
+    }
 `
 

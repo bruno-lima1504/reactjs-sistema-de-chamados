@@ -37,12 +37,14 @@ export default function SignIn(){
                         placeholder='digite seu e-mail'
                         onChange={ (e) => setEmail(e.target.value) }
                         value={email}
+                        required={true}
                     />
                     <C.Input 
                         type='password'
                         placeholder='digite sua senha'
                         onChange={(e) => setPassword(e.target.value)}
                         value={password}
+                        required={true}
                     />
                     <C.LoginButton type='submit'>
                         {loadingAuth ? "Carregando..." : "Acessar"}

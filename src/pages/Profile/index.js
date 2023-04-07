@@ -131,7 +131,7 @@ export default function Profile(){
                         <C.BtnSave type="submit">Salvar</C.BtnSave>
 
                     </C.Form>
-                </C.Container>
+                </C.Container>                
                 <C.Container>
                     <C.LogoutBtn onClick={() => logout()} >Sair</C.LogoutBtn>
                 </C.Container>

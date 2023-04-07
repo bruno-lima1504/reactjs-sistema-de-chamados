@@ -39,18 +39,21 @@ export default function SignUp(){
                         placeholder='digite seu nome'
                         onChange={ (e) => setName(e.target.value) }
                         value={name}
+                        required={true}
                     />
                     <C.Input 
                         type='text'
                         placeholder='digite seu e-mail'
                         onChange={ (e) => setEmail(e.target.value) }
                         value={email}
+                        required={true}                        
                     />
                     <C.Input 
                         type='password'
                         placeholder='digite sua senha'
                         onChange={(e) => setPassword(e.target.value)}
                         value={password}
+                        required={true}
                     />
                     <C.SignUpButton type='submit'>
                         {loadingAuth ? 'Carregando...' : 'Cadastrar'}
