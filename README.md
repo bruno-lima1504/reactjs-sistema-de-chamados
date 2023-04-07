@@ -99,7 +99,7 @@ O projeto foi estruturado para que seja totalmente expansível e escalável, as 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-lima-9ba21b242/)
 
-| [<img src="	https://avatars.githubusercontent.com/u/102754701?s=96&v=4" width=115><br><sub>Bruno Lima</sub>](https://github.com/bruno-lima1504) 
+| [<img src="https://avatars.githubusercontent.com/u/102754701?s=96&v=4" width=115><br><sub>Bruno Lima</sub>](https://github.com/bruno-lima1504) 
 | :---: |
 
 
